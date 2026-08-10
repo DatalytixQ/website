@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(0, 0%, 98%);
+  --color-foreground: hsl(222.2, 84%, 4.9%);
+  
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(222.2, 84%, 4.9%);
+  
+  --color-primary: hsl(222.2, 47.4%, 11.2%);
+  --color-primary-foreground: hsl(210, 40%, 98%);
+  
+  --color-gold: hsl(43, 74%, 49%);
+  
+  --color-border: hsl(214.3, 31.8%, 91.4%);
+  --color-muted: hsl(210, 40%, 96.1%);
+  --color-muted-foreground: hsl(215.4, 16.3%, 46.9%);
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 lg:py-32;
+  }
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-6;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6;
+  }
+  .gradient-navy {
+    @apply bg-gradient-to-br from-primary to-slate-900;
+  }
+  .gradient-gold {
+    @apply bg-gradient-to-r from-yellow-500 to-amber-600;
+  }
+}
+
+body {
+  @apply bg-background text-foreground antialiased scroll-smooth;
+}
