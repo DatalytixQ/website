@@ -47,15 +47,15 @@ const SolutionSection = () => {
           className="mb-16"
         >
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            La Solución
+            Consultoría en Automatización
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-3 mb-6">
-            Inteligencia Operacional para Entornos ERP
+            Implementación de IA e Inteligencia Operacional para su ERP
           </h2>
           <p className="text-primary-foreground/70 text-lg max-w-2xl leading-relaxed">
-            Instalamos capas de inteligencia operacional por encima de su ERP
+            Instalamos capas de Inteligencia Artificial y automatización por encima de su ERP
             existente —sin modificarlo ni intervenir su configuración—
-            transformándolo de un sistema de registro a una plataforma de
+            transformándolo de un simple sistema de registro a una plataforma predictiva de
             decisión en tiempo real.
           </p>
           <p className="text-primary-foreground/70 text-lg max-w-2xl leading-relaxed mt-4">

@@ -44,7 +44,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-xl lg:text-2xl text-primary-foreground/70 leading-relaxed mb-12 max-w-4xl mx-auto"
           >
-            Automatice operaciones, obtenga visibilidad en tiempo real y tome decisiones más rápidas instalando capas de inteligencia sobre su ERP actual.
+            Automatice procesos empresariales, obtenga visibilidad en tiempo real y tome decisiones más rápidas implementando Inteligencia Artificial sobre su ERP actual.
           </motion.p>
 
           <motion.div

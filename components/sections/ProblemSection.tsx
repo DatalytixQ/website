@@ -41,7 +41,7 @@ const ProblemSection = () => {
           className="mb-16"
         >
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            El Problema
+            Fricción Operativa y Falta de Automatización
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mt-3 mb-6">
             Su ERP registra transacciones. <br className="hidden md:block" />
@@ -49,9 +49,9 @@ const ProblemSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
             La mayoría de las empresas implementan un ERP esperando control
-            operacional total. Sin embargo, muchas siguen dependiendo de
-            planillas de cálculo, reportes manuales, sistemas desconectados y
-            decisiones tardías.
+            operacional total. Sin embargo, nuestro diagnóstico de fricción operativa revela que 
+            muchas siguen dependiendo de planillas de cálculo, procesos desconectados y
+            ausencia de automatización de procesos empresariales.
           </p>
         </motion.div>
 
