@@ -101,24 +101,46 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             transition={{ delay: 0.1 }}
             className="bg-card border border-border rounded-xl p-6 md:p-8 shadow-sm"
           >
-            <h3 className="text-lg font-semibold text-primary mb-6">Desglose por área:</h3>
-            <div className="space-y-4">
-              <div className="flex items-center justify-between py-2 border-b border-border/50">
-                <span className="text-muted-foreground">Entorno ERP</span>
-                <span className="font-bold text-primary">{category_percentages.entorno}%</span>
-              </div>
-              <div className="flex items-center justify-between py-2 border-b border-border/50">
-                <span className="text-muted-foreground">Visibilidad Operacional</span>
-                <span className="font-bold text-primary">{category_percentages.visibilidad}%</span>
-              </div>
-              <div className="flex items-center justify-between py-2 border-b border-border/50">
-                <span className="text-muted-foreground">Automatización</span>
-                <span className="font-bold text-primary">{category_percentages.automatizacion}%</span>
-              </div>
-              <div className="flex items-center justify-between py-2">
-                <span className="text-muted-foreground">Inteligencia de Decisión</span>
-                <span className="font-bold text-primary">{category_percentages.inteligencia}%</span>
-              </div>
+            <h3 className="text-lg font-semibold text-primary mb-2">Nivel de Madurez por Área:</h3>
+            <p className="text-sm text-muted-foreground mb-6">Porcentaje de optimización tecnológica frente al estándar ideal.</p>
+            
+            <div className="space-y-6">
+              {[
+                { label: "Entorno ERP", value: category_percentages.entorno },
+                { label: "Visibilidad Operacional", value: category_percentages.visibilidad },
+                { label: "Automatización", value: category_percentages.automatizacion },
+                { label: "Inteligencia de Decisión", value: category_percentages.inteligencia }
+              ].map((cat, idx) => {
+                let statusColor = "bg-red-500";
+                let statusLabel = "Crítico";
+                
+                if (cat.value >= 70) {
+                  statusColor = "bg-green-500";
+                  statusLabel = "Avanzado";
+                } else if (cat.value >= 40) {
+                  statusColor = "bg-yellow-500";
+                  statusLabel = "Básico";
+                }
+
+                return (
+                  <div key={idx} className={idx < 3 ? "border-b border-border/50 pb-5" : ""}>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-semibold text-primary">{cat.label}</span>
+                      <span className="text-sm font-bold text-primary">
+                        {cat.value}% <span className="text-muted-foreground font-normal ml-1">({statusLabel})</span>
+                      </span>
+                    </div>
+                    <div className="w-full bg-secondary/50 rounded-full h-2">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        animate={{ width: `${cat.value}%` }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        className={`h-2 rounded-full ${statusColor}`} 
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         )}
