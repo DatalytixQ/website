@@ -6,20 +6,20 @@ import { useRef } from "react";
 const steps = [
   {
     number: "01",
-    title: "Assessment de Inteligencia Operacional ERP",
-    desc: "Una evaluación corta que mide la madurez de inteligencia operacional de su entorno ERP.",
+    title: "Assessment & Diagnóstico Rápido",
+    desc: "Una evaluación de su entorno ERP que identifica de inmediato los cuellos de botella y oportunidades clave de automatización.",
     tag: "1–2 días",
   },
   {
     number: "02",
-    title: "Diagnóstico de Inteligencia Operacional",
-    desc: "Un análisis estratégico y técnico más profundo que identifica oportunidades de automatización y capas de inteligencia operacional.",
-    tag: "1 semana",
+    title: "Activación Temprana",
+    desc: "Conexión ágil a su ERP y despliegue de los primeros dashboards operacionales y flujos automatizados funcionales.",
+    tag: "Primera semana",
   },
   {
     number: "03",
-    title: "Implementación de Inteligencia Operacional",
-    desc: "Despliegue de flujos de automatización, agentes de IA y dashboards ejecutivos operacionales.",
+    title: "Expansión & Mejora Continua",
+    desc: "Desarrollo de nuevas capacidades, integración de otras fuentes de datos y escalabilidad de agentes de Inteligencia Artificial.",
     tag: "Continuo",
   },
 ];

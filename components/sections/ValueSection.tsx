@@ -6,7 +6,7 @@ import { TrendingDown, Gauge, Zap, BarChart3, Eye } from "lucide-react";
 
 const values = [
   { icon: TrendingDown, title: "Menor fricción operacional", desc: "Elimine cuellos de botella y procesos redundantes." },
-  { icon: Gauge, title: "Insights financieros más rápidos", desc: "Cierre contable acelerado y reportes en tiempo real." },
+  { icon: Gauge, title: "Insights operacionales transversales", desc: "Visibilidad integral en tiempo real: desde inventario y ventas hasta el cierre contable." },
   { icon: Zap, title: "Velocidad de decisión", desc: "De datos a decisiones en minutos, no semanas." },
   { icon: BarChart3, title: "Automatización de procesos críticos", desc: "Flujos inteligentes que operan sin intervención manual." },
   { icon: Eye, title: "Visibilidad ejecutiva superior", desc: "Dashboards consolidados para la alta dirección." },

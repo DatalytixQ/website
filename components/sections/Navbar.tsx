@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -12,33 +14,38 @@ const Navbar = () => {
     { label: "Solución", href: "#solucion" },
     { label: "Metodología", href: "#metodologia" },
     { label: "Assessment", href: "#assessment" },
-    { label: "Contacto", href: "#nosotros" },
+    { label: "Contacto", href: "#contacto" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="container-wide flex items-center justify-between h-16">
-        <a href="#" className="font-display text-xl font-bold tracking-tight text-primary">
+        <Link href="/" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-primary">
+          <img 
+            src="/logo.png" 
+            alt="Datalytix Quest Logo" 
+            className="w-8 h-8 object-contain"
+          />
           Datalytix Quest
-        </a>
+        </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="#assessment"
             className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2 rounded-md hover:opacity-90 transition-opacity"
           >
             Evaluar Mi ERP
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -59,24 +66,24 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-card border-b border-border overflow-hidden"
           >
-            <div className="flex flex-col gap-4 px-6 py-6">
+            <div className="flex flex-col items-start gap-4 px-6 py-6">
               {links.map((l) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="text-sm font-medium text-muted-foreground hover:text-primary"
                 >
                   {l.label}
-                </a>
+                </Link>
               ))}
-              <a
+              <Link
                 href="#assessment"
                 onClick={() => setOpen(false)}
-                className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2.5 rounded-md text-center"
+                className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2.5 rounded-md mt-2"
               >
                 Evaluar Mi ERP
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

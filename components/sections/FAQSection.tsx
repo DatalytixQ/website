@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "¿Cuánto tiempo toma ver resultados?",
-    answer: "El primer paso es el Diagnóstico de 40 horas, donde en solo 5 días mapeamos toda la fricción operacional. La implementación posterior (Fase 3) entrega 'Quick Wins' en las primeras 3 a 4 semanas.",
+    answer: "El proceso es sumamente ágil. La conexión técnica con su ERP suele completarse en horas, permitiendo desplegar los dashboards iniciales durante la primera semana. Luego, realizamos un periodo de onboarding para calibrar y ajustar los tableros a las necesidades operativas exactas de su negocio.",
   },
   {
     question: "¿Qué esfuerzo de TI requiere de mi lado?",
