@@ -61,10 +61,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="es"
+      translate="no"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">
-        {/* Google Analytics 4 (Reemplazar G-XXXXXXXXXX con tu ID real) */}
+        {children}
+
+        {/* Google Analytics 4 */}
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=G-YGDGE89CFX`}
@@ -90,8 +93,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        
-        {children}
       </body>
     </html>
   );
