@@ -112,7 +112,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
                 { label: "Inteligencia de Decisión", value: category_percentages.inteligencia }
               ].map((cat, idx) => {
                 let statusColor = "bg-red-500";
-                let statusLabel = "Crítico";
+                let statusLabel = "Riesgo";
                 
                 if (cat.value >= 70) {
                   statusColor = "bg-green-500";
