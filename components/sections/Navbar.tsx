@@ -20,11 +20,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="container-wide flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-3 font-display text-xl font-bold tracking-tight text-primary">
+        <Link href="/" className="flex items-center gap-3 font-display text-2xl font-bold tracking-tight text-primary">
           <img 
             src="/logo.png" 
             alt="Datalytix Quest Logo" 
-            className="w-8 h-8 object-contain"
+            className="w-10 h-10 object-contain"
           />
           Datalytix Quest
         </Link>
