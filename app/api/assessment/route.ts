@@ -81,49 +81,110 @@ export async function POST(req: Request) {
       transformationOpportunity = "Oportunidad de Transformación Crítica: Su entorno operacional concentra un potencial de mejora significativo en el corto plazo, con impacto directo sobre margen y capacidad de decisión.";
     }
 
-    // --- GENERACIÓN DE HALLAZGOS (HEURÍSTICAS) ---
+    // --- GENERACIÓN DE HALLAZGOS (HEURÍSTICAS CON VARIABILIDAD) ---
     const findings = [];
+    
+    // Función helper para elegir un hallazgo aleatorio
+    const getRandomVariation = (variations: {title: string, description: string}[]) => {
+      return variations[Math.floor(Math.random() * variations.length)];
+    };
 
     if (scoreTotal < 25) {
-      findings.push({
-        title: "ERP como Centro de Costo, no de Rentabilidad",
-        description: "Su ERP opera principalmente como sistema de registro. La inversión ya realizada en licencias y datos no está devolviendo capacidad de decisión: se paga la infraestructura sin capturar el retorno operacional que habilita."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "El ERP como Centro de Costo, no de Rentabilidad",
+          description: "Su ERP opera principalmente como sistema de registro. La inversión ya realizada no está devolviendo capacidad de decisión anticipada: se paga la infraestructura sin capturar el retorno operacional que habilita."
+        },
+        {
+          title: "Subutilización del Entorno Transaccional",
+          description: "Notamos que su plataforma actual funciona más como un repositorio histórico que como un motor activo. El sistema está subutilizado en su capacidad de generar alertas de negocio tempranas."
+        },
+        {
+          title: "Bajo Retorno sobre la Inversión en Datos",
+          description: "El esfuerzo de ingreso de datos a su sistema no se correlaciona con la velocidad en la que obtienen insights. Es necesario transformar el repositorio pasivo en un ecosistema predictivo."
+        }
+      ]));
     }
 
     if (ansMap['q4'] <= 2) {
-      findings.push({
-        title: "Decisiones con Información Vencida",
-        description: "La dirección está tomando decisiones sobre una fotografía del pasado. Cada día de retraso en la visibilidad extiende la exposición a desvíos de costo, quiebres de stock y sobrecompras que ya ocurrieron y no pueden corregirse."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "Decisiones con Información Vencida",
+          description: "La dirección está tomando decisiones sobre una fotografía del pasado. Cada día de retraso en la visibilidad extiende la exposición a desvíos de costo que ya ocurrieron y no pueden corregirse."
+        },
+        {
+          title: "Latencia Crítica en la Visibilidad Operacional",
+          description: "Sus reportes reflejan el estado del negocio con días de desfase. Actuar sobre información que no es en tiempo real limita drásticamente la capacidad de reaccionar ante quiebres de stock o variaciones de demanda."
+        },
+        {
+          title: "Gestión Reactiva en lugar de Proactiva",
+          description: "La ausencia de dashboards en tiempo real obliga a los equipos a gestionar crisis operacionales cuando el problema ya impactó los márgenes, impidiendo la mitigación preventiva."
+        }
+      ]));
     }
 
     if (ansMap['q7'] <= 2) {
-      findings.push({
-        title: "Riesgo de Fuga de Capital",
-        description: "Su alta dependencia de planillas fuera del ERP sugiere que decisiones estratégicas se están tomando con datos asíncronos y manipulados manualmente. Esto típicamente aumenta el riesgo de errores y oculta ineficiencias operativas que cuestan puntos de rentabilidad."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "Riesgo de Fuga de Capital por Procesos Manuales",
+          description: "Su alta dependencia de planillas fuera del ERP sugiere que decisiones estratégicas se están tomando con datos asíncronos y manipulados manualmente. Esto típicamente aumenta el riesgo de errores."
+        },
+        {
+          title: "Fragmentación de la Verdad Operacional",
+          description: "La proliferación de hojas de cálculo operando en paralelo al ERP genera múltiples versiones de la verdad. Esto debilita la integridad de los datos y oculta ineficiencias operativas."
+        },
+        {
+          title: "Vulnerabilidad en Procesos Críticos",
+          description: "Los flujos de trabajo que dependen de intervenciones manuales constantes y cruces de Excel representan un punto de fallo significativo y un freno para la escalabilidad del negocio."
+        }
+      ]));
     }
 
     if (ansMap['q8'] <= 2) {
-      findings.push({
-        title: "Costo Oculto de Horas Ejecutivas",
-        description: "Equipos calificados destinan una porción relevante de su tiempo a consolidar, cruzar y reconciliar información en lugar de analizarla. Es capital humano de alto costo aplicado a tareas que una capa de automatización absorbe de forma continua."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "Costo Oculto de Horas Ejecutivas",
+          description: "Equipos calificados destinan una porción relevante de su tiempo a consolidar y reconciliar información en lugar de analizarla. Es capital humano de alto costo aplicado a tareas transaccionales."
+        },
+        {
+          title: "Ineficiencia en el Talento Analítico",
+          description: "Gran parte del esfuerzo de su equipo se consume en extraer y limpiar datos. Al automatizar estas tareas repetitivas, se liberan miles de horas para análisis estratégico de alto valor."
+        },
+        {
+          title: "Fricción Administrativa Severa",
+          description: "La falta de automatización operacional obliga a su equipo a actuar como 'integradores humanos' entre sistemas, lo que disminuye la velocidad de la organización frente a sus competidores."
+        }
+      ]));
     }
 
     if (ansMap['q9'] <= 2) {
-      findings.push({
-        title: "Ventana de Reacción Demasiado Amplia",
-        description: "Los desvíos se detectan cuando ya impactaron el resultado. Acortar esa ventana con alertas e indicadores en tiempo real es, en la práctica, recuperar margen que hoy se pierde de forma silenciosa."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "Ventana de Reacción Demasiado Amplia",
+          description: "Los desvíos se detectan cuando ya impactaron el resultado. Acortar esa ventana con alertas e indicadores en tiempo real es, en la práctica, recuperar margen que hoy se pierde."
+        },
+        {
+          title: "Ausencia de Alertas de Negocio Tempranas",
+          description: "Sin inteligencia embebida en sus flujos, la operación depende de la revisión manual para detectar excepciones, provocando respuestas tardías a problemas críticos."
+        },
+        {
+          title: "Puntos Ciegos Operacionales",
+          description: "La incapacidad de detectar anomalías operativas de forma automática genera puntos ciegos. Implementar monitoreo impulsado por IA cerraría esta brecha instantáneamente."
+        }
+      ]));
     }
 
     if (findings.length === 0) {
-      findings.push({
-        title: "Operación de Alta Madurez",
-        description: "Sus procesos actuales demuestran un nivel sobresaliente de digitalización y proactividad."
-      });
+      findings.push(getRandomVariation([
+        {
+          title: "Operación de Alta Madurez",
+          description: "Sus procesos actuales demuestran un nivel sobresaliente de digitalización y proactividad."
+        },
+        {
+          title: "Arquitectura Transaccional Sólida",
+          description: "Las respuestas indican un entorno altamente automatizado y maduro, excelente punto de partida para IA avanzada."
+        }
+      ]));
     }
 
     // 1. Generar ID único desde el backend para evitar problemas de RLS (Select)
