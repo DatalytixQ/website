@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://www.datalytixquest.com/sitemap.xml',
+    sitemap: 'https://datalytixquest.com/sitemap.xml',
   }
 }
