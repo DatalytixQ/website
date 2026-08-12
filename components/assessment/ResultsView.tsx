@@ -17,9 +17,10 @@ interface ResultsViewProps {
     };
     findings?: { title: string; description: string }[];
   };
+  dict: any;
 }
 
-export default function ResultsView({ resultData }: ResultsViewProps) {
+export default function ResultsView({ resultData, dict }: ResultsViewProps) {
   const { score, friction_level, category_percentages, findings, name } = resultData;
   const maxRawScore = 49;
   
@@ -27,14 +28,14 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
   const normalizedScore = Math.round((score / maxRawScore) * 100);
 
   let levelColor = "text-red-600";
-  let subtitle = "Su ERP opera principalmente como sistema de registro. Hay un alto potencial de transformación.";
+  let subtitle = dict.subtitles.high;
 
-  if (friction_level === "Bajo") {
+  if (friction_level === "Bajo" || friction_level === "Low") {
     levelColor = "text-green-600";
-    subtitle = "Su entorno es altamente maduro. El siguiente paso es explorar modelos predictivos avanzados.";
-  } else if (friction_level === "Medio") {
+    subtitle = dict.subtitles.low;
+  } else if (friction_level === "Medio" || friction_level === "Medium") {
     levelColor = "text-yellow-600";
-    subtitle = "La organización ha resuelto lo básico, pero existe una gran oportunidad para automatizar flujos y ganar visibilidad real.";
+    subtitle = dict.subtitles.medium;
   }
 
   const reportRef = useRef<HTMLDivElement>(null);
@@ -63,10 +64,10 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
       const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
       
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
-      pdf.save("Reporte-Inteligencia-Operacional-DQ.pdf");
+      pdf.save(dict.pdfFilename);
     } catch (error) {
       console.error("Error generando PDF:", error);
-      alert("Hubo un problema al generar el PDF. Intente nuevamente.");
+      alert(dict.pdfError);
     } finally {
       setIsDownloading(false);
     }
@@ -87,9 +88,9 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             <CheckCircle className="text-gold w-8 h-8" />
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-primary">
-            Resultado: {normalizedScore} <span className="text-2xl text-muted-foreground">/ 100</span>
+            {dict.scorePrefix}{normalizedScore} <span className="text-2xl text-muted-foreground">{dict.outOf}</span>
           </h2>
-          <p className={`text-lg font-medium ${levelColor}`}>Nivel de Fricción Operativa: {friction_level}</p>
+          <p className={`text-lg font-medium ${levelColor}`}>{dict.frictionLevel}{friction_level}</p>
           <p className="text-muted-foreground max-w-2xl mx-auto pt-2">{subtitle}</p>
         </motion.div>
 
@@ -101,25 +102,25 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             transition={{ delay: 0.1 }}
             className="bg-card border border-border rounded-xl p-6 md:p-8 shadow-sm"
           >
-            <h3 className="text-lg font-semibold text-primary mb-2">Nivel de Madurez por Área:</h3>
-            <p className="text-sm text-muted-foreground mb-6">Porcentaje de optimización tecnológica frente al estándar ideal.</p>
+            <h3 className="text-lg font-semibold text-primary mb-2">{dict.maturityTitle}</h3>
+            <p className="text-sm text-muted-foreground mb-6">{dict.maturitySubtitle}</p>
             
             <div className="space-y-6">
               {[
-                { label: "Entorno ERP", value: category_percentages.entorno },
-                { label: "Visibilidad Operacional", value: category_percentages.visibilidad },
-                { label: "Automatización", value: category_percentages.automatizacion },
-                { label: "Inteligencia de Decisión", value: category_percentages.inteligencia }
+                { label: dict.categories.entorno, value: category_percentages.entorno },
+                { label: dict.categories.visibilidad, value: category_percentages.visibilidad },
+                { label: dict.categories.automatizacion, value: category_percentages.automatizacion },
+                { label: dict.categories.inteligencia, value: category_percentages.inteligencia }
               ].map((cat, idx) => {
                 let statusColor = "bg-red-500";
-                let statusLabel = "Riesgo";
+                let statusLabel = dict.status.risk;
                 
                 if (cat.value >= 70) {
                   statusColor = "bg-green-500";
-                  statusLabel = "Avanzado";
+                  statusLabel = dict.status.advanced;
                 } else if (cat.value >= 40) {
                   statusColor = "bg-yellow-500";
-                  statusLabel = "Básico";
+                  statusLabel = dict.status.basic;
                 }
 
                 return (
@@ -153,7 +154,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             transition={{ delay: 0.2 }}
             className="bg-card border border-border rounded-xl p-6 md:p-8 shadow-sm"
           >
-            <h3 className="text-xl font-display font-bold text-primary mb-6">Hallazgos e impacto potencial en su operación</h3>
+            <h3 className="text-xl font-display font-bold text-primary mb-6">{dict.findingsTitle}</h3>
             <div className="space-y-6">
               {findings.map((finding, idx) => (
                 <div key={idx} className="flex gap-4">
@@ -168,7 +169,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
               ))}
             </div>
             <div className="mt-8 pt-4 border-t border-border/50">
-              <p className="text-xs italic text-muted-foreground opacity-80">Estos hallazgos son preliminares y están diseñados para orientar una conversación estratégica con Datalytix Quest.</p>
+              <p className="text-xs italic text-muted-foreground opacity-80">{dict.findingsDisclaimer}</p>
             </div>
           </motion.div>
         )}
@@ -183,7 +184,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
         className="text-center pt-4"
       >
         <p className="text-muted-foreground">
-          Gracias{name ? `, ${name}` : ""}. Nuestro equipo se pondrá en contacto con usted a la brevedad.
+          {dict.thanks}{name ? `, ${name}` : ""}{dict.contactSoon}
         </p>
       </motion.div>
 
@@ -194,8 +195,8 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
         transition={{ delay: 0.4 }}
         className="bg-secondary/50 border border-border rounded-xl p-8 md:p-10 text-center mt-4"
       >
-        <h3 className="text-2xl font-display font-bold text-primary mb-3">Revisemos estos hallazgos sobre su operación</h3>
-        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Una sesión de 45 minutos para cuantificar el impacto y priorizar las primeras oportunidades de automatización.</p>
+        <h3 className="text-2xl font-display font-bold text-primary mb-3">{dict.ctaTitle}</h3>
+        <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{dict.ctaSubtitle}</p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a 
@@ -205,7 +206,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             className="w-full sm:w-auto gradient-gold text-white font-semibold px-8 py-4 rounded-md inline-flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg hover:scale-105 duration-200"
           >
             <Calendar size={18} />
-            Agendar Sesión de Diagnóstico
+            {dict.bookSession}
           </a>
           <button
             onClick={handleDownloadPDF}
@@ -213,7 +214,7 @@ export default function ResultsView({ resultData }: ResultsViewProps) {
             className={`w-full sm:w-auto border border-border font-medium px-8 py-4 rounded-md inline-flex items-center justify-center gap-2 transition-all ${isDownloading ? 'opacity-60 cursor-not-allowed bg-secondary/30 text-muted-foreground' : 'hover:bg-primary-foreground/10 text-primary-foreground cursor-pointer'}`}
           >
             {isDownloading ? <Loader2 size={18} className="animate-spin" /> : <Download size={18} />}
-            {isDownloading ? 'Generando PDF...' : 'Descargar Reporte PDF'}
+            {isDownloading ? dict.generatingPdf : dict.downloadPdf}
           </button>
         </div>
       </motion.div>

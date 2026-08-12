@@ -1,0 +1,613 @@
+{
+  "navbar": {
+    "problem": "El Problema",
+    "solution": "Solución",
+    "methodology": "Metodología",
+    "assessment": "Assessment",
+    "contact": "Contacto",
+    "cta": "Evaluar Mi ERP"
+  },
+  "hero": {
+    "badge": "Inteligencia Operacional para entornos ERP",
+    "title": "Transforme su ERP en un Sistema de Inteligencia Operacional",
+    "description": "Datalytix Quest ayuda a organizaciones a automatizar operaciones, obtener visibilidad en tiempo real y tomar decisiones más rápidas instalando capas de inteligencia sobre su ERP y el resto de su ecosistema de sistemas (CRM, aplicaciones legadas, bases de datos y otras fuentes).",
+    "primaryCta": "Realizar el Assessment",
+    "secondaryCta": "Agendar Conversación Estratégica"
+  },
+  "problem": {
+    "badge": "Fricción Operativa y Falta de Automatización",
+    "title1": "Su ERP registra transacciones.",
+    "title2": "Pero no genera inteligencia operacional.",
+    "description": "La mayoría de las empresas implementan un ERP esperando control operacional total. Sin embargo, nuestro diagnóstico de fricción operativa revela que muchas siguen dependiendo de planillas de cálculo, procesos desconectados y ausencia de automatización de procesos empresariales.",
+    "items": [
+      {
+        "title": "Visibilidad limitada en tiempo real",
+        "desc": "Los reportes se generan días después, cuando las decisiones ya fueron tomadas."
+      },
+      {
+        "title": "Ciclos de cierre financiero lentos",
+        "desc": "Procesos manuales que extienden los cierres y retrasan la información crítica."
+      },
+      {
+        "title": "Ineficiencias operacionales",
+        "desc": "Tareas repetitivas que consumen recursos y generan errores evitables."
+      },
+      {
+        "title": "Alta dependencia de procesos manuales",
+        "desc": "Planillas, emails y flujos desconectados que fragmentan la operación."
+      }
+    ]
+  },
+  "solution": {
+    "badge": "Consultoría en Automatización",
+    "title": "Implementación de IA e Inteligencia Operacional para su ERP",
+    "description1": "Instalamos capas de Inteligencia Artificial y automatización por encima de su ERP existente —sin modificarlo ni intervenir su configuración— transformándolo de un simple sistema de registro a una plataforma predictiva de decisión en tiempo real.",
+    "description2": "El ERP es la base, no el límite: la operación también vive en el CRM, en sistemas legados, en bases de datos y en otras fuentes. La inteligencia operacional se construye sobre todas esas fuentes.",
+    "sources": [
+      "ERP (núcleo)",
+      "CRM",
+      "Sistemas legados",
+      "Bases de datos",
+      "Otras fuentes",
+      "APIs y archivos"
+    ],
+    "guarantees": [
+      "Cero intervención sobre sus sistemas",
+      "Sin customizaciones",
+      "Sin riesgo en upgrades"
+    ],
+    "pillars": [
+      "Automatización operacional",
+      "Monitoreo impulsado por IA",
+      "Dashboards ejecutivos",
+      "Inteligencia de decisión",
+      "Insights automatizados"
+    ],
+    "outcomesTitle": "Resultados",
+    "outcomes": [
+      "Ciclos de decisión más rápidos",
+      "Mayor eficiencia operacional",
+      "Visibilidad operacional en tiempo real"
+    ]
+  },
+  "approach": {
+    "badge": "Metodología",
+    "title": "Tres pasos hacia la inteligencia operacional",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Assessment & Diagnóstico Rápido",
+        "desc": "Una evaluación de su entorno ERP que identifica de inmediato los cuellos de botella y oportunidades clave de automatización.",
+        "tag": "1–2 días"
+      },
+      {
+        "number": "02",
+        "title": "Activación Temprana",
+        "desc": "Conexión ágil a su ERP y despliegue de los primeros dashboards operacionales y flujos automatizados funcionales.",
+        "tag": "Primera semana"
+      },
+      {
+        "number": "03",
+        "title": "Expansión & Mejora Continua",
+        "desc": "Desarrollo de nuevas capacidades, integración de otras fuentes de datos y escalabilidad de agentes de Inteligencia Artificial.",
+        "tag": "Continuo"
+      }
+    ]
+  },
+  "assessment": {
+    "badge": "ASSESSMENT",
+    "title": "Assessment de Inteligencia Operacional ERP",
+    "description": "Esta evaluación corta analiza qué tan efectivamente su entorno ERP soporta la toma de decisiones operacionales. El primer paso identifica su entorno ERP y contexto operacional.",
+    "tags": [
+      "Entorno ERP",
+      "Visibilidad Operacional",
+      "Automatización",
+      "Inteligencia de Decisión"
+    ],
+    "cta": "Iniciar Assessment",
+    "meta": "13 preguntas • 5 minutos",
+    "errors": {
+      "processing": "Ocurrió un error al procesar sus resultados. Intente nuevamente.",
+      "connection": "Error de conexión. Revise su internet e intente nuevamente."
+    },
+    "wizard": {
+      "questions": [
+        {
+          "id": "q1",
+          "category": "Entorno ERP",
+          "text": "¿Qué sistema ERP utiliza su empresa?",
+          "options": [
+            {
+              "label": "SAP",
+              "value": 3
+            },
+            {
+              "label": "NetSuite",
+              "value": 3
+            },
+            {
+              "label": "Microsoft Dynamics",
+              "value": 3
+            },
+            {
+              "label": "Oracle",
+              "value": 3
+            },
+            {
+              "label": "Odoo",
+              "value": 3
+            },
+            {
+              "label": "Otro",
+              "value": 2
+            },
+            {
+              "label": "Operamos con múltiples sistemas: la información está fragmentada y es difícil de consolidar",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "category": "Entorno ERP",
+          "text": "¿Cuál es el modelo de implementación de su ERP?",
+          "options": [
+            {
+              "label": "Cloud / SaaS",
+              "value": 3
+            },
+            {
+              "label": "On-premise",
+              "value": 2
+            },
+            {
+              "label": "Híbrido",
+              "value": 2
+            },
+            {
+              "label": "La arquitectura está fragmentada entre distintos entornos y es difícil de consolidar",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "category": "Entorno ERP",
+          "text": "¿Cuánto tiempo lleva su empresa utilizando el ERP actual?",
+          "options": [
+            {
+              "label": "Recientemente implementado (< 1 año)",
+              "value": 1
+            },
+            {
+              "label": "1-3 años",
+              "value": 2
+            },
+            {
+              "label": "Más de 3 años",
+              "value": 3
+            },
+            {
+              "label": "Conviven distintas implementaciones: el historial está fragmentado y es difícil de consolidar",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "category": "Visibilidad Operacional",
+          "text": "¿Cómo acceden los ejecutivos a los insights operacionales?",
+          "options": [
+            {
+              "label": "Dashboards en tiempo real",
+              "value": 4
+            },
+            {
+              "label": "Reportes del ERP con demora",
+              "value": 3
+            },
+            {
+              "label": "Reportes en Excel",
+              "value": 2
+            },
+            {
+              "label": "Consolidación manual",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "category": "Visibilidad Operacional",
+          "text": "¿Cuánto tiempo toma el cierre financiero?",
+          "options": [
+            {
+              "label": "1-3 días",
+              "value": 4
+            },
+            {
+              "label": "4-7 días",
+              "value": 3
+            },
+            {
+              "label": "8-15 días",
+              "value": 2
+            },
+            {
+              "label": "Más de 15 días",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "category": "Visibilidad Operacional",
+          "text": "¿Los ejecutivos tienen visibilidad de KPIs en tiempo real?",
+          "options": [
+            {
+              "label": "Sí, completamente",
+              "value": 4
+            },
+            {
+              "label": "Parcialmente",
+              "value": 3
+            },
+            {
+              "label": "Solo reportes periódicos",
+              "value": 2
+            },
+            {
+              "label": "Sin visibilidad real",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "category": "Automatización",
+          "text": "¿Qué porcentaje de procesos depende de planillas fuera del ERP?",
+          "options": [
+            {
+              "label": "Menos del 10%",
+              "value": 4
+            },
+            {
+              "label": "10-30%",
+              "value": 3
+            },
+            {
+              "label": "30-60%",
+              "value": 2
+            },
+            {
+              "label": "Más del 60%",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "category": "Automatización",
+          "text": "¿Qué tan automatizados están sus procesos operacionales?",
+          "options": [
+            {
+              "label": "Altamente automatizados",
+              "value": 4
+            },
+            {
+              "label": "Parcialmente automatizados",
+              "value": 3
+            },
+            {
+              "label": "Mayormente manuales",
+              "value": 2
+            },
+            {
+              "label": "Muy manuales",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "category": "Automatización",
+          "text": "¿Qué nivel de proactividad tienen las alertas operacionales de su ERP actual?",
+          "options": [
+            {
+              "label": "Proactivas: previenen el problema antes de que suceda",
+              "value": 4
+            },
+            {
+              "label": "Reactivas inmediatas: avisan en el instante en que ocurre el error",
+              "value": 3
+            },
+            {
+              "label": "Manuales/dependientes: requieren que un humano busque el error para encontrarlo",
+              "value": 2
+            },
+            {
+              "label": "Inexistentes: apagamos incendios sobre problemas ya materializados",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "category": "Inteligencia de Decisión",
+          "text": "¿Cómo se detectan anomalías operacionales?",
+          "options": [
+            {
+              "label": "Automáticamente por sistemas",
+              "value": 4
+            },
+            {
+              "label": "Mediante dashboards",
+              "value": 3
+            },
+            {
+              "label": "Mediante análisis manual",
+              "value": 2
+            },
+            {
+              "label": "Generalmente se detectan tarde",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "category": "Inteligencia de Decisión",
+          "text": "¿Qué tan integrados están los sistemas operacionales con su ERP?",
+          "options": [
+            {
+              "label": "Totalmente integrados",
+              "value": 4
+            },
+            {
+              "label": "Parcialmente integrados",
+              "value": 3
+            },
+            {
+              "label": "Mayormente desconectados",
+              "value": 2
+            },
+            {
+              "label": "Muchas integraciones manuales",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "category": "Inteligencia de Decisión",
+          "text": "¿Qué tan rápido puede el liderazgo reaccionar ante cambios operacionales?",
+          "options": [
+            {
+              "label": "Inmediatamente",
+              "value": 4
+            },
+            {
+              "label": "En pocos días",
+              "value": 3
+            },
+            {
+              "label": "Después de preparar reportes",
+              "value": 2
+            },
+            {
+              "label": "Generalmente demasiado tarde",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "category": "Inteligencia de Decisión",
+          "text": "¿Su empresa utiliza algún tipo de Inteligencia Artificial conectada a sus datos operacionales?",
+          "options": [
+            {
+              "label": "Sí, la IA es parte integral de nuestra toma de decisiones",
+              "value": 4
+            },
+            {
+              "label": "Estamos explorando pilotos o pruebas de concepto aisladas",
+              "value": 3
+            },
+            {
+              "label": "Planeamos implementarla, pero no tenemos proyectos activos",
+              "value": 2
+            },
+            {
+              "label": "No, en lo absoluto",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "progress": {
+        "questionText": "Pregunta",
+        "of": "de",
+        "completed": "Completado"
+      },
+      "nav": {
+        "previous": "Anterior"
+      }
+    },
+    "lead": {
+      "title": "Diagnóstico Completado",
+      "description": "Hemos calculado su nivel de madurez operacional. Ingrese sus datos para revelar sus resultados instantáneamente y recibir una copia detallada.",
+      "name": "Nombre Completo *",
+      "namePlaceholder": "Ej. Carlos Mendoza",
+      "email": "Email Corporativo *",
+      "emailPlaceholder": "carlos@empresa.com",
+      "company": "Empresa",
+      "companyPlaceholder": "Nombre de su organización",
+      "role": "Cargo",
+      "rolePlaceholder": "Ej. Gerente General, CFO",
+      "submit": "Revelar Resultados",
+      "submitting": "Procesando Resultados...",
+      "privacy": "Sus datos están seguros. Solo los utilizaremos para enviar su reporte."
+    },
+    "results": {
+      "scorePrefix": "Resultado: ",
+      "outOf": "/ 100",
+      "frictionLevel": "Nivel de Fricción Operativa: ",
+      "subtitles": {
+        "low": "Su entorno es altamente maduro. El siguiente paso es explorar modelos predictivos avanzados.",
+        "medium": "La organización ha resuelto lo básico, pero existe una gran oportunidad para automatizar flujos y ganar visibilidad real.",
+        "high": "Su ERP opera principalmente como sistema de registro. Hay un alto potencial de transformación."
+      },
+      "maturityTitle": "Nivel de Madurez por Área:",
+      "maturitySubtitle": "Porcentaje de optimización tecnológica frente al estándar ideal.",
+      "categories": {
+        "entorno": "Entorno ERP",
+        "visibilidad": "Visibilidad Operacional",
+        "automatizacion": "Automatización",
+        "inteligencia": "Inteligencia de Decisión"
+      },
+      "status": {
+        "advanced": "Avanzado",
+        "basic": "Básico",
+        "risk": "Riesgo"
+      },
+      "findingsTitle": "Hallazgos e impacto potencial en su operación",
+      "findingsDisclaimer": "Estos hallazgos son preliminares y están diseñados para orientar una conversación estratégica con Datalytix Quest.",
+      "thanks": "Gracias",
+      "contactSoon": ". Nuestro equipo se pondrá en contacto con usted a la brevedad.",
+      "ctaTitle": "Revisemos estos hallazgos sobre su operación",
+      "ctaSubtitle": "Una sesión de 45 minutos para cuantificar el impacto y priorizar las primeras oportunidades de automatización.",
+      "bookSession": "Agendar Sesión de Diagnóstico",
+      "downloadPdf": "Descargar Reporte PDF",
+      "generatingPdf": "Generando PDF...",
+      "pdfError": "Hubo un problema al generar el PDF. Intente nuevamente.",
+      "pdfFilename": "Reporte-Inteligencia-Operacional-DQ.pdf"
+    }
+  },
+  "value": {
+    "badge": "Propuesta de Valor",
+    "title": "Resultados que transforman operaciones",
+    "items": [
+      {
+        "title": "Menor fricción operacional",
+        "desc": "Elimine cuellos de botella y procesos redundantes."
+      },
+      {
+        "title": "Insights operacionales transversales",
+        "desc": "Visibilidad integral en tiempo real: desde inventario y ventas hasta el cierre contable."
+      },
+      {
+        "title": "Velocidad de decisión",
+        "desc": "De datos a decisiones en minutos, no semanas."
+      },
+      {
+        "title": "Automatización de procesos críticos",
+        "desc": "Flujos inteligentes que operan sin intervención manual."
+      },
+      {
+        "title": "Visibilidad ejecutiva superior",
+        "desc": "Dashboards consolidados para la alta dirección."
+      }
+    ]
+  },
+  "industries": {
+    "badge": "Industrias",
+    "title": "Metodología aplicable a toda organización con ERP",
+    "description": "Nuestra metodología se adapta a cualquier empresa que opere con un sistema ERP como plataforma central.",
+    "items": [
+      {
+        "label": "Manufactura"
+      },
+      {
+        "label": "Distribución"
+      },
+      {
+        "label": "Logística"
+      },
+      {
+        "label": "Retail"
+      },
+      {
+        "label": "Tecnología"
+      },
+      {
+        "label": "Servicios Profesionales"
+      }
+    ]
+  },
+  "about": {
+    "badge": "Sobre Nosotros",
+    "title": "Especialistas en Inteligencia Operacional para entornos ERP",
+    "paragraphs": [
+      "Datalytix Quest combina expertise en ecosistemas ERP con arquitectura de automatización, analítica operacional y sistemas de decisión impulsados por inteligencia artificial.",
+      "No somos un partner de implementación ERP. Somos arquitectos de inteligencia operacional que transforman su ERP existente en una plataforma que automatiza procesos, genera visibilidad en tiempo real y acelera la toma de decisiones."
+    ],
+    "stats": [
+      {
+        "value": "ERP",
+        "label": "Ecosistemas"
+      },
+      {
+        "value": "IA",
+        "label": "Decisión"
+      },
+      {
+        "value": "Auto",
+        "label": "Automatización"
+      },
+      {
+        "value": "Data",
+        "label": "Analítica"
+      }
+    ]
+  },
+  "footer": {
+    "brand": "Datalytix Quest",
+    "badge": "Inteligencia Operacional",
+    "description": "Transformando sistemas de registro contable en verdaderas plataformas de decisión ejecutiva en tiempo real.",
+    "latam": {
+      "title": "Operaciones LATAM",
+      "location": "Santiago, Chile",
+      "email": "latam@datalytixquest.com"
+    },
+    "usa": {
+      "title": "Operaciones USA",
+      "location": "Miami, FL",
+      "email": "usa@datalytixquest.com"
+    },
+    "contact": {
+      "title": "Contacto",
+      "cta": "Conversación Estratégica"
+    },
+    "rights": "Todos los derechos reservados."
+  },
+  "faq": {
+    "badge": "Resolviendo Dudas",
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "question": "¿Necesito reemplazar mi ERP actual para trabajar con ustedes?",
+        "answer": "No. Nuestra metodología se basa en instalar capas de inteligencia (Dashboards, IA, Automatización) por encima de su sistema actual, sin intervenir su configuración base ni requerir migraciones costosas."
+      },
+      {
+        "question": "¿Cuánto tiempo toma ver resultados?",
+        "answer": "El proceso es sumamente ágil. La conexión técnica con su ERP suele completarse en horas, permitiendo desplegar los dashboards iniciales durante la primera semana. Luego, realizamos un periodo de onboarding para calibrar y ajustar los tableros a las necesidades operativas exactas de su negocio."
+      },
+      {
+        "question": "¿Qué esfuerzo de TI requiere de mi lado?",
+        "answer": "Mínimo. Generalmente solo necesitamos credenciales de lectura a sus fuentes de datos. Nuestro equipo de ingeniería se encarga de los conectores, el modelado, la arquitectura y la seguridad."
+      },
+      {
+        "question": "¿Necesito pagar licencias por cada usuario?",
+        "answer": "El objetivo es democratizar la información. Dependiendo de la arquitectura implementada, evitamos el cobro por asiento para que toda la gerencia y operación pueda usar la plataforma sin fricciones presupuestarias."
+      },
+      {
+        "question": "¿Cómo protegen la confidencialidad de mis datos?",
+        "answer": "Aplicamos protocolos enterprise: encriptación de datos en tránsito y en reposo, y gobierno de acceso por roles (Row-Level Security). Nadie ve información para la que no tiene permisos explícitos."
+      },
+      {
+        "question": "¿Existe soporte técnico y mantenimiento continuo?",
+        "answer": "Sí. No entregamos software y nos vamos. Nuestro modelo incluye continuidad operativa, monitoreo de los flujos de datos y soporte para adaptar los modelos ante cambios en su negocio."
+      }
+    ]
+  }
+}

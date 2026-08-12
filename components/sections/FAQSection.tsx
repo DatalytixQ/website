@@ -4,34 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-const faqs = [
-  {
-    question: "¿Necesito reemplazar mi ERP actual para trabajar con ustedes?",
-    answer: "No. Nuestra metodología se basa en instalar capas de inteligencia (Dashboards, IA, Automatización) por encima de su sistema actual, sin intervenir su configuración base ni requerir migraciones costosas.",
-  },
-  {
-    question: "¿Cuánto tiempo toma ver resultados?",
-    answer: "El proceso es sumamente ágil. La conexión técnica con su ERP suele completarse en horas, permitiendo desplegar los dashboards iniciales durante la primera semana. Luego, realizamos un periodo de onboarding para calibrar y ajustar los tableros a las necesidades operativas exactas de su negocio.",
-  },
-  {
-    question: "¿Qué esfuerzo de TI requiere de mi lado?",
-    answer: "Mínimo. Generalmente solo necesitamos credenciales de lectura a sus fuentes de datos. Nuestro equipo de ingeniería se encarga de los conectores, el modelado, la arquitectura y la seguridad.",
-  },
-  {
-    question: "¿Necesito pagar licencias por cada usuario?",
-    answer: "El objetivo es democratizar la información. Dependiendo de la arquitectura implementada, evitamos el cobro por asiento para que toda la gerencia y operación pueda usar la plataforma sin fricciones presupuestarias.",
-  },
-  {
-    question: "¿Cómo protegen la confidencialidad de mis datos?",
-    answer: "Aplicamos protocolos enterprise: encriptación de datos en tránsito y en reposo, y gobierno de acceso por roles (Row-Level Security). Nadie ve información para la que no tiene permisos explícitos.",
-  },
-  {
-    question: "¿Existe soporte técnico y mantenimiento continuo?",
-    answer: "Sí. No entregamos software y nos vamos. Nuestro modelo incluye continuidad operativa, monitoreo de los flujos de datos y soporte para adaptar los modelos ante cambios en su negocio.",
-  }
-];
-
-const FAQSection = () => {
+const FAQSection = ({ dict }: { dict: any }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -46,15 +19,15 @@ const FAQSection = () => {
           className="text-center mb-16"
         >
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            Resolviendo Dudas
+            {dict.badge}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mt-3 mb-6">
-            Preguntas Frecuentes
+            {dict.title}
           </h2>
         </motion.div>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
-          {faqs.map((faq, i) => (
+          {dict.items.map((faq: any, i: number) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}

@@ -12,9 +12,11 @@ const values = [
   { icon: Eye, title: "Visibilidad ejecutiva superior", desc: "Dashboards consolidados para la alta dirección." },
 ];
 
-const ValueSection = () => {
+const ValueSection = ({ dict }: { dict: any }) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const icons = [TrendingDown, Gauge, Zap, BarChart3, Eye];
 
   return (
     <section className="section-padding gradient-navy" ref={ref}>
@@ -26,27 +28,30 @@ const ValueSection = () => {
           className="mb-14"
         >
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            Propuesta de Valor
+            {dict.badge}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mt-3">
-            Resultados que transforman operaciones
+            {dict.title}
           </h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {values.map((v, i) => (
-            <motion.div
-              key={v.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
-              className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-6"
-            >
-              <v.icon size={24} className="text-gold mb-3" />
-              <h3 className="text-primary-foreground font-semibold mb-1 font-body">{v.title}</h3>
-              <p className="text-primary-foreground/60 text-sm leading-relaxed">{v.desc}</p>
-            </motion.div>
-          ))}
+          {dict.items.map((v: any, i: number) => {
+            const Icon = icons[i % icons.length];
+            return (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-lg p-6"
+              >
+                <Icon size={24} className="text-gold mb-3" />
+                <h3 className="text-primary-foreground font-semibold mb-1 font-body">{v.title}</h3>
+                <p className="text-primary-foreground/60 text-sm leading-relaxed">{v.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

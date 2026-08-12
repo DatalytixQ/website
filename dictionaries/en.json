@@ -1,0 +1,613 @@
+{
+  "navbar": {
+    "problem": "The Problem",
+    "solution": "Solution",
+    "methodology": "Methodology",
+    "assessment": "Assessment",
+    "contact": "Contact",
+    "cta": "Evaluate My ERP"
+  },
+  "hero": {
+    "badge": "Operational Intelligence for ERP",
+    "title": "Transform Your ERP into an Operational Intelligence System",
+    "description": "We help organizations automate operations, gain real-time visibility, and accelerate decision-making by overlaying intelligence layers onto your ERP and existing ecosystem (CRM, legacy apps, databases).",
+    "primaryCta": "Take the Assessment",
+    "secondaryCta": "Book a Strategy Call"
+  },
+  "problem": {
+    "badge": "Operational Friction & Automation Gaps",
+    "title1": "Your ERP records transactions.",
+    "title2": "But it doesn't generate operational intelligence.",
+    "description": "Most companies implement an ERP expecting total operational control. Yet, our diagnostic reveals that many still rely on spreadsheets, struggle with disconnected workflows, and lack end-to-end automation.",
+    "items": [
+      {
+        "title": "Limited real-time visibility",
+        "desc": "Reports arrive days late—long after critical decisions should have been made."
+      },
+      {
+        "title": "Slow financial close cycles",
+        "desc": "Manual processes that drag out month-end close and delay vital insights."
+      },
+      {
+        "title": "Operational inefficiencies",
+        "desc": "Repetitive tasks that drain resources and introduce costly human errors."
+      },
+      {
+        "title": "Over-reliance on manual workarounds",
+        "desc": "Spreadsheets, emails, and disconnected workflows that fracture your operations."
+      }
+    ]
+  },
+  "solution": {
+    "badge": "Intelligent Automation",
+    "title": "AI & Operational Intelligence for your ERP",
+    "description1": "We overlay AI and automation onto your existing ERP—without modifying its core configuration—transforming it from a basic system of record into a real-time, predictive decision engine.",
+    "description2": "Your ERP is the foundation, not the ceiling. Because your operations also span CRMs, legacy systems, and databases, we build operational intelligence across your entire ecosystem.",
+    "sources": [
+      "ERP (core)",
+      "CRM",
+      "Legacy systems",
+      "Databases",
+      "Other sources",
+      "APIs and files"
+    ],
+    "guarantees": [
+      "Zero intervention on your systems",
+      "No customizations required",
+      "No risk during upgrades"
+    ],
+    "pillars": [
+      "Operational automation",
+      "AI-driven monitoring",
+      "Executive dashboards",
+      "Decision intelligence",
+      "Automated insights"
+    ],
+    "outcomesTitle": "Business Outcomes",
+    "outcomes": [
+      "Faster decision cycles",
+      "Greater operational efficiency",
+      "Real-time operational visibility"
+    ]
+  },
+  "approach": {
+    "badge": "Methodology",
+    "title": "Three steps to operational intelligence",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Assessment & Rapid Diagnostic",
+        "desc": "A deep dive into your ERP environment to pinpoint bottlenecks and high-ROI automation opportunities.",
+        "tag": "1–2 days"
+      },
+      {
+        "number": "02",
+        "title": "Rapid Activation",
+        "desc": "Seamless connection to your ERP to deploy your first operational dashboards and automated workflows.",
+        "tag": "First week"
+      },
+      {
+        "number": "03",
+        "title": "Scale & Continuous Optimization",
+        "desc": "Rolling out new capabilities, integrating additional data sources, and scaling your AI agents.",
+        "tag": "Continuous"
+      }
+    ]
+  },
+  "assessment": {
+    "badge": "ASSESSMENT",
+    "title": "ERP Operational Intelligence Assessment",
+    "description": "This brief evaluation analyzes how effectively your current ERP environment supports operational decision-making and identifies critical gaps in automation.",
+    "tags": [
+      "ERP Environment",
+      "Operational Visibility",
+      "Automation",
+      "Decision Intelligence"
+    ],
+    "cta": "Start Assessment",
+    "meta": "13 questions • 5 minutes",
+    "errors": {
+      "processing": "An error occurred while processing your results. Please try again.",
+      "connection": "Connection error. Please check your internet and try again."
+    },
+    "wizard": {
+      "questions": [
+        {
+          "id": "q1",
+          "category": "ERP Environment",
+          "text": "Which ERP system does your company use?",
+          "options": [
+            {
+              "label": "SAP",
+              "value": 3
+            },
+            {
+              "label": "NetSuite",
+              "value": 3
+            },
+            {
+              "label": "Microsoft Dynamics",
+              "value": 3
+            },
+            {
+              "label": "Oracle",
+              "value": 3
+            },
+            {
+              "label": "Odoo",
+              "value": 3
+            },
+            {
+              "label": "Other",
+              "value": 2
+            },
+            {
+              "label": "We operate with multiple systems: information is fragmented and difficult to consolidate",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "category": "ERP Environment",
+          "text": "What is your ERP implementation model?",
+          "options": [
+            {
+              "label": "Cloud / SaaS",
+              "value": 3
+            },
+            {
+              "label": "On-premise",
+              "value": 2
+            },
+            {
+              "label": "Hybrid",
+              "value": 2
+            },
+            {
+              "label": "The architecture is fragmented across different environments and is difficult to consolidate",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "category": "ERP Environment",
+          "text": "How long has your company been using the current ERP?",
+          "options": [
+            {
+              "label": "Recently implemented (< 1 year)",
+              "value": 1
+            },
+            {
+              "label": "1-3 years",
+              "value": 2
+            },
+            {
+              "label": "More than 3 years",
+              "value": 3
+            },
+            {
+              "label": "Different implementations coexist: history is fragmented and difficult to consolidate",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q4",
+          "category": "Operational Visibility",
+          "text": "How do executives access operational insights?",
+          "options": [
+            {
+              "label": "Real-time dashboards",
+              "value": 4
+            },
+            {
+              "label": "Delayed ERP reports",
+              "value": 3
+            },
+            {
+              "label": "Excel reports",
+              "value": 2
+            },
+            {
+              "label": "Manual consolidation",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q5",
+          "category": "Operational Visibility",
+          "text": "How long does the financial close take?",
+          "options": [
+            {
+              "label": "1-3 days",
+              "value": 4
+            },
+            {
+              "label": "4-7 days",
+              "value": 3
+            },
+            {
+              "label": "8-15 days",
+              "value": 2
+            },
+            {
+              "label": "More than 15 days",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q6",
+          "category": "Operational Visibility",
+          "text": "Do executives have real-time visibility of KPIs?",
+          "options": [
+            {
+              "label": "Yes, completely",
+              "value": 4
+            },
+            {
+              "label": "Partially",
+              "value": 3
+            },
+            {
+              "label": "Only periodic reports",
+              "value": 2
+            },
+            {
+              "label": "No real visibility",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q7",
+          "category": "Automation",
+          "text": "What percentage of processes rely on spreadsheets outside the ERP?",
+          "options": [
+            {
+              "label": "Less than 10%",
+              "value": 4
+            },
+            {
+              "label": "10-30%",
+              "value": 3
+            },
+            {
+              "label": "30-60%",
+              "value": 2
+            },
+            {
+              "label": "More than 60%",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q8",
+          "category": "Automation",
+          "text": "How automated are your operational processes?",
+          "options": [
+            {
+              "label": "Highly automated",
+              "value": 4
+            },
+            {
+              "label": "Partially automated",
+              "value": 3
+            },
+            {
+              "label": "Mostly manual",
+              "value": 2
+            },
+            {
+              "label": "Very manual",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q9",
+          "category": "Automation",
+          "text": "How proactive are the operational alerts in your current ERP?",
+          "options": [
+            {
+              "label": "Proactive: Prevents issues before they occur",
+              "value": 4
+            },
+            {
+              "label": "Reactive: Notifies us the instant an error occurs",
+              "value": 3
+            },
+            {
+              "label": "Manual: Requires human intervention to detect errors",
+              "value": 2
+            },
+            {
+              "label": "Non-existent: We constantly put out fires",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q10",
+          "category": "Decision Intelligence",
+          "text": "How are operational anomalies detected?",
+          "options": [
+            {
+              "label": "Automatically by systems",
+              "value": 4
+            },
+            {
+              "label": "Through dashboards",
+              "value": 3
+            },
+            {
+              "label": "Through manual analysis",
+              "value": 2
+            },
+            {
+              "label": "Usually detected late",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q11",
+          "category": "Decision Intelligence",
+          "text": "How integrated are the operational systems with your ERP?",
+          "options": [
+            {
+              "label": "Fully integrated",
+              "value": 4
+            },
+            {
+              "label": "Partially integrated",
+              "value": 3
+            },
+            {
+              "label": "Mostly disconnected",
+              "value": 2
+            },
+            {
+              "label": "Many manual integrations",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q12",
+          "category": "Decision Intelligence",
+          "text": "How quickly can leadership react to operational changes?",
+          "options": [
+            {
+              "label": "Immediately",
+              "value": 4
+            },
+            {
+              "label": "In a few days",
+              "value": 3
+            },
+            {
+              "label": "After preparing reports",
+              "value": 2
+            },
+            {
+              "label": "Usually too late",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "q13",
+          "category": "Decision Intelligence",
+          "text": "Does your company use any type of Artificial Intelligence connected to your operational data?",
+          "options": [
+            {
+              "label": "Yes, AI is an integral part of our decision making",
+              "value": 4
+            },
+            {
+              "label": "We are exploring isolated pilots or proofs of concept",
+              "value": 3
+            },
+            {
+              "label": "We plan to implement it, but have no active projects",
+              "value": 2
+            },
+            {
+              "label": "No, not at all",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "progress": {
+        "questionText": "Question",
+        "of": "of",
+        "completed": "Completed"
+      },
+      "nav": {
+        "previous": "Previous"
+      }
+    },
+    "lead": {
+      "title": "Diagnostic Completed",
+      "description": "Your operational maturity score is ready. Enter your details to instantly reveal your results and receive a comprehensive report.",
+      "name": "Full Name *",
+      "namePlaceholder": "e.g., John Doe",
+      "email": "Corporate Email *",
+      "emailPlaceholder": "john@company.com",
+      "company": "Company",
+      "companyPlaceholder": "Name of your organization",
+      "role": "Role",
+      "rolePlaceholder": "e.g., CEO, CFO",
+      "submit": "Reveal Results",
+      "submitting": "Processing Results...",
+      "privacy": "Your data is safe. We will only use it to send your report."
+    },
+    "results": {
+      "scorePrefix": "Result: ",
+      "outOf": "/ 100",
+      "frictionLevel": "Operational Friction: ",
+      "subtitles": {
+        "low": "Your environment is highly mature. The next step is to explore advanced predictive models.",
+        "medium": "You have the basics covered, but there is significant opportunity to automate workflows and gain true end-to-end visibility.",
+        "high": "Your ERP is operating primarily as a basic system of record. You have massive potential for operational transformation."
+      },
+      "maturityTitle": "Maturity Level by Area:",
+      "maturitySubtitle": "Percentage of technological optimization compared to the ideal standard.",
+      "categories": {
+        "entorno": "ERP Environment",
+        "visibilidad": "Operational Visibility",
+        "automatizacion": "Automation",
+        "inteligencia": "Decision Intelligence"
+      },
+      "status": {
+        "advanced": "Advanced",
+        "basic": "Basic",
+        "risk": "Risk"
+      },
+      "findingsTitle": "Key Findings & Operational Impact",
+      "findingsDisclaimer": "These findings are preliminary and designed to frame a strategic conversation with Datalytix Quest.",
+      "thanks": "Thank you",
+      "contactSoon": ". Our team will contact you shortly.",
+      "ctaTitle": "Let's review these findings about your operation",
+      "ctaSubtitle": "A 45-minute session to quantify the impact and prioritize early automation opportunities.",
+      "bookSession": "Schedule Diagnostic Session",
+      "downloadPdf": "Download PDF Report",
+      "generatingPdf": "Generating PDF...",
+      "pdfError": "There was a problem generating the PDF. Please try again.",
+      "pdfFilename": "DQ-Operational-Intelligence-Report.pdf"
+    }
+  },
+  "value": {
+    "badge": "Value Proposition",
+    "title": "Business outcomes that transform operations",
+    "items": [
+      {
+        "title": "Reduced Operational Friction",
+        "desc": "Eliminate bottlenecks and redundant processes."
+      },
+      {
+        "title": "End-to-End Operational Insights",
+        "desc": "Comprehensive real-time visibility: from inventory and sales to the financial close."
+      },
+      {
+        "title": "Decision velocity",
+        "desc": "From data to decisions in minutes, not weeks."
+      },
+      {
+        "title": "Core Process Automation",
+        "desc": "Intelligent workflows that operate without manual intervention."
+      },
+      {
+        "title": "Unprecedented Executive Visibility",
+        "desc": "Consolidated dashboards for top management."
+      }
+    ]
+  },
+  "industries": {
+    "badge": "Industries",
+    "title": "Proven methodology for any ERP-driven organization",
+    "description": "Our framework is completely system-agnostic and adapts to any company operating on a centralized ERP platform.",
+    "items": [
+      {
+        "label": "Manufacturing"
+      },
+      {
+        "label": "Distribution"
+      },
+      {
+        "label": "Logistics"
+      },
+      {
+        "label": "Retail"
+      },
+      {
+        "label": "Technology"
+      },
+      {
+        "label": "Professional Services"
+      }
+    ]
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "Architects of Operational Intelligence for ERP Ecosystems",
+    "paragraphs": [
+      "Datalytix Quest combines expertise in ERP ecosystems with automation architecture, operational analytics, and decision systems driven by artificial intelligence.",
+      "We are not traditional ERP implementers. We are operational intelligence architects who transform your existing ERP into a platform that automates processes, generates real-time visibility, and accelerates decision-making."
+    ],
+    "stats": [
+      {
+        "value": "ERP",
+        "label": "Ecosystems"
+      },
+      {
+        "value": "AI",
+        "label": "Decision"
+      },
+      {
+        "value": "Auto",
+        "label": "Automation"
+      },
+      {
+        "value": "Data",
+        "label": "Analytics"
+      }
+    ]
+  },
+  "footer": {
+    "brand": "Datalytix Quest",
+    "badge": "Operational Intelligence",
+    "description": "Transforming accounting record systems into true real-time executive decision platforms.",
+    "latam": {
+      "title": "LATAM Operations",
+      "location": "Santiago, Chile",
+      "email": "latam@datalytixquest.com"
+    },
+    "usa": {
+      "title": "USA Operations",
+      "location": "Miami, FL",
+      "email": "usa@datalytixquest.com"
+    },
+    "contact": {
+      "title": "Contact",
+      "cta": "Strategic Conversation"
+    },
+    "rights": "All rights reserved."
+  },
+  "faq": {
+    "badge": "Resolving Doubts",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Do I need to replace my current ERP to work with you?",
+        "answer": "Not at all. We build intelligence layers (Dashboards, AI, Automation) on top of your existing infrastructure—meaning zero disruption to your core configuration and no costly migrations."
+      },
+      {
+        "question": "How quickly will we see ROI?",
+        "answer": "Our deployment is highly agile. Technical integration often takes just hours, meaning your first operational dashboards can be live within a week. We then iterate rapidly to calibrate these tools to your exact business needs."
+      },
+      {
+        "question": "What level of IT involvement is required?",
+        "answer": "Minimal. We typically only require read-only access to your data sources. Our engineering team handles all connectors, data modeling, architecture, and security protocols."
+      },
+      {
+        "question": "Do I need to pay licenses per user?",
+        "answer": "The goal is to democratize information. Depending on the implemented architecture, we avoid per-seat charging so that all management and operations can use the platform without budgetary friction."
+      },
+      {
+        "question": "How do you protect the confidentiality of my data?",
+        "answer": "We apply enterprise protocols: data encryption in transit and at rest, and role-based access governance (Row-Level Security). No one sees information they don't have explicit permission for."
+      },
+      {
+        "question": "Is there technical support and ongoing maintenance?",
+        "answer": "Yes. We don't deliver software and walk away. Our model includes operational continuity, data flow monitoring, and support to adapt models to changes in your business."
+      }
+    ]
+  }
+}

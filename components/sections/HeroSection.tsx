@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  dict: Record<string, string>;
+}
+
+const HeroSection = ({ dict }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center gradient-navy overflow-hidden">
       <div
@@ -26,7 +30,7 @@ const HeroSection = () => {
             className="mb-4"
           >
             <span className="inline-block text-gold text-sm font-semibold tracking-widest uppercase">
-              Inteligencia Operacional para ERP
+              {dict.badge}
             </span>
           </motion.div>
 
@@ -36,7 +40,13 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-[1.1] mb-6"
           >
-            Transforme Su ERP en un Sistema de <span className="text-gold">Inteligencia Operacional</span>
+            {dict.title.split(/Inteligencia Operacional|Operational Intelligence/)[0]}
+            {dict.title.includes('Inteligencia Operacional') ? (
+              <span className="text-gold">Inteligencia Operacional</span>
+            ) : dict.title.includes('Operational Intelligence') ? (
+              <span className="text-gold">Operational Intelligence</span>
+            ) : null}
+            {dict.title.split(/Inteligencia Operacional|Operational Intelligence/)[1]}
           </motion.h1>
 
           <motion.p
@@ -45,7 +55,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed mb-10 max-w-2xl"
           >
-            Datalytix Quest ayuda a organizaciones a automatizar operaciones, obtener visibilidad en tiempo real y tomar decisiones más rápidas instalando capas de inteligencia sobre su ERP y el resto de su ecosistema de sistemas (CRM, aplicaciones legadas, bases de datos y otras fuentes).
+            {dict.description}
           </motion.p>
 
           <motion.div
@@ -58,7 +68,7 @@ const HeroSection = () => {
               href="#assessment"
               className="gradient-gold text-accent-foreground font-semibold px-8 py-4 rounded-md inline-flex items-center justify-center gap-2 hover:opacity-90 transition-opacity text-base"
             >
-              Realizar el Assessment
+              {dict.primaryCta}
               <ArrowRight size={18} />
             </a>
             <a
@@ -68,7 +78,7 @@ const HeroSection = () => {
               className="border border-primary-foreground/30 text-primary-foreground font-medium px-8 py-4 rounded-md inline-flex items-center justify-center gap-2 hover:bg-primary-foreground/10 transition-colors text-base"
             >
               <Calendar size={18} />
-              Agendar Conversación Estratégica
+              {dict.secondaryCta}
             </a>
           </motion.div>
         </div>

@@ -7,9 +7,10 @@ import { ArrowRight, Loader2, Lock } from "lucide-react";
 interface LeadCaptureFormProps {
   onSubmit: (data: { name: string; email: string; company: string; role: string }) => void;
   isSubmitting: boolean;
+  dict: any;
 }
 
-export default function LeadCaptureForm({ onSubmit, isSubmitting }: LeadCaptureFormProps) {
+export default function LeadCaptureForm({ onSubmit, isSubmitting, dict }: LeadCaptureFormProps) {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", role: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,55 +26,55 @@ export default function LeadCaptureForm({ onSubmit, isSubmitting }: LeadCaptureF
     >
       <div className="text-center mb-10">
         <h3 className="text-2xl md:text-3xl font-display font-bold text-primary mb-3">
-          Diagnóstico Completado
+          {dict.title}
         </h3>
         <p className="text-muted-foreground">
-          Hemos calculado su nivel de madurez operacional. Ingrese sus datos para revelar sus resultados instantáneamente y recibir una copia detallada.
+          {dict.description}
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-primary">Nombre Completo *</label>
+            <label className="text-sm font-semibold text-primary">{dict.name}</label>
             <input
               required
               type="text"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               className="w-full bg-background border border-border rounded-md px-4 py-3 text-primary focus:outline-none focus:ring-2 focus:ring-gold/50"
-              placeholder="Ej. Carlos Mendoza"
+              placeholder={dict.namePlaceholder}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-primary">Email Corporativo *</label>
+            <label className="text-sm font-semibold text-primary">{dict.email}</label>
             <input
               required
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               className="w-full bg-background border border-border rounded-md px-4 py-3 text-primary focus:outline-none focus:ring-2 focus:ring-gold/50"
-              placeholder="carlos@empresa.com"
+              placeholder={dict.emailPlaceholder}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-primary">Empresa</label>
+            <label className="text-sm font-semibold text-primary">{dict.company}</label>
             <input
               type="text"
               value={formData.company}
               onChange={(e) => setFormData({ ...formData, company: e.target.value })}
               className="w-full bg-background border border-border rounded-md px-4 py-3 text-primary focus:outline-none focus:ring-2 focus:ring-gold/50"
-              placeholder="Nombre de su organización"
+              placeholder={dict.companyPlaceholder}
             />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-primary">Cargo</label>
+            <label className="text-sm font-semibold text-primary">{dict.role}</label>
             <input
               type="text"
               value={formData.role}
               onChange={(e) => setFormData({ ...formData, role: e.target.value })}
               className="w-full bg-background border border-border rounded-md px-4 py-3 text-primary focus:outline-none focus:ring-2 focus:ring-gold/50"
-              placeholder="Ej. Gerente General, CFO"
+              placeholder={dict.rolePlaceholder}
             />
           </div>
         </div>
@@ -87,11 +88,11 @@ export default function LeadCaptureForm({ onSubmit, isSubmitting }: LeadCaptureF
             {isSubmitting ? (
               <>
                 <Loader2 size={20} className="animate-spin" />
-                Procesando Resultados...
+                {dict.submitting}
               </>
             ) : (
               <>
-                Revelar Resultados
+                {dict.submit}
                 <ArrowRight size={20} />
               </>
             )}
@@ -99,7 +100,7 @@ export default function LeadCaptureForm({ onSubmit, isSubmitting }: LeadCaptureF
         </div>
         <p className="text-xs text-muted-foreground text-center mt-4 flex items-center justify-center gap-1.5">
           <Lock size={12} />
-          Sus datos están seguros. Solo los utilizaremos para enviar su reporte.
+          {dict.privacy}
         </p>
       </form>
     </motion.div>

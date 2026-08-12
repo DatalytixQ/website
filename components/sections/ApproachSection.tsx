@@ -3,28 +3,20 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const steps = [
-  {
-    number: "01",
-    title: "Assessment & Diagnóstico Rápido",
-    desc: "Una evaluación de su entorno ERP que identifica de inmediato los cuellos de botella y oportunidades clave de automatización.",
-    tag: "1–2 días",
-  },
-  {
-    number: "02",
-    title: "Activación Temprana",
-    desc: "Conexión ágil a su ERP y despliegue de los primeros dashboards operacionales y flujos automatizados funcionales.",
-    tag: "Primera semana",
-  },
-  {
-    number: "03",
-    title: "Expansión & Mejora Continua",
-    desc: "Desarrollo de nuevas capacidades, integración de otras fuentes de datos y escalabilidad de agentes de Inteligencia Artificial.",
-    tag: "Continuo",
-  },
-];
+interface ApproachSectionProps {
+  dict: {
+    badge: string;
+    title: string;
+    steps: Array<{
+      number: string;
+      title: string;
+      desc: string;
+      tag: string;
+    }>;
+  };
+}
 
-const ApproachSection = () => {
+const ApproachSection = ({ dict }: ApproachSectionProps) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -38,15 +30,15 @@ const ApproachSection = () => {
           className="mb-16"
         >
           <span className="text-gold text-sm font-semibold tracking-widest uppercase">
-            Metodología
+            {dict.badge}
           </span>
           <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mt-3 mb-6">
-            Tres pasos hacia la inteligencia operacional
+            {dict.title}
           </h2>
         </motion.div>
 
         <div className="space-y-8">
-          {steps.map((s, i) => (
+          {dict.steps.map((s, i) => (
             <motion.div
               key={s.number}
               initial={{ opacity: 0, x: -30 }}

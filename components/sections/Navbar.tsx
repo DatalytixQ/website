@@ -5,22 +5,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
 
-const Navbar = () => {
+interface NavbarProps {
+  dict: Record<string, string>;
+  lang: string;
+}
+
+const Navbar = ({ dict, lang }: NavbarProps) => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "El Problema", href: "#problema" },
-    { label: "Solución", href: "#solucion" },
-    { label: "Metodología", href: "#metodologia" },
-    { label: "Assessment", href: "#assessment" },
-    { label: "Contacto", href: "#contacto" },
+    { label: dict.problem, href: "#problema" },
+    { label: dict.solution, href: "#solucion" },
+    { label: dict.methodology, href: "#metodologia" },
+    { label: dict.assessment, href: "#assessment" },
+    { label: dict.contact, href: "#contacto" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="container-wide flex items-center justify-between h-16">
-        <Link href="/" className="flex items-center gap-3 font-display text-2xl font-bold tracking-tight text-primary">
+        <Link href={`/${lang}`} className="flex items-center gap-3 font-display text-2xl font-bold tracking-tight text-primary">
           <img 
             src="/logo.png" 
             alt="Datalytix Quest Logo" 
@@ -30,7 +36,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((l) => (
             <Link
               key={l.href}
@@ -40,11 +46,15 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          
+          <div className="mx-2 h-4 w-px bg-border"></div>
+          <LanguageSwitcher currentLang={lang} />
+          
           <Link
             href="#assessment"
             className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2 rounded-md hover:opacity-90 transition-opacity"
           >
-            Evaluar Mi ERP
+            {dict.cta}
           </Link>
         </div>
 
@@ -82,7 +92,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
                 className="gradient-gold text-accent-foreground text-sm font-semibold px-5 py-2.5 rounded-md mt-2"
               >
-                Evaluar Mi ERP
+                {dict.cta}
               </Link>
             </div>
           </motion.div>
