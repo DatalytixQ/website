@@ -563,7 +563,7 @@
   "footer": {
     "brand": "Datalytix Quest",
     "badge": "Operational Intelligence",
-    "description": "Transforming accounting record systems into true real-time executive decision platforms.",
+    "description": "Transforming operational ecosystems into true real-time executive decision platforms.",
     "latam": {
       "title": "LATAM Operations",
       "location": "Santiago, Chile",
@@ -576,7 +576,7 @@
     },
     "contact": {
       "title": "Contact",
-      "cta": "Strategic Conversation"
+      "cta": "Book a Strategy Call"
     },
     "rights": "All rights reserved."
   },
