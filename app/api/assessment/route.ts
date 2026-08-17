@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import emailValidator from "deep-email-validator";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -21,19 +20,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Faltan campos requeridos" }, { status: 400 });
     }
 
-    // Validación de Email (Regex y Desechables únicamente)
-    const emailValidation = await emailValidator({
-      email: email,
-      validateRegex: true,
-      validateMx: false, // Desactivado para evitar bloqueos por DNS corporativos lentos o privados
-      validateTypo: false, // Desactivado para evitar falsos positivos (ej. rechazar correos reales que parecen typos)
-      validateDisposable: true, // Bloquea correos temporales (mailinator, etc.)
-      validateSMTP: false, 
-    });
-
-    if (!emailValidation.valid) {
+    // Validación de Email básica y muy rápida (Regex + dominios desechables comunes)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       return NextResponse.json({ 
-        error: "Verifique que su dirección de correo esté escrita correctamente y sea una cuenta corporativa válida." 
+        error: "Verifique que su dirección de correo esté escrita correctamente." 
+      }, { status: 400 });
+    }
+
+    const disposableDomains = [
+      "mailinator.com", "yopmail.com", "10minutemail.com", "tempmail.com", "guerrillamail.com",
+      "sharklasers.com", "dispostable.com", "temp-mail.org", "throwawaymail.com", "catchthisemail.com"
+    ];
+    
+    const domain = email.split('@')[1]?.toLowerCase();
+    if (disposableDomains.includes(domain)) {
+      return NextResponse.json({ 
+        error: "Por favor, utilice una cuenta de correo corporativa válida." 
       }, { status: 400 });
     }
 
